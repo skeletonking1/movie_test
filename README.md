@@ -3,11 +3,9 @@
 
 - [React](https://reactjs.org/)
 
-- [JavaScript](https://www.javascript.com/)
-
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 
-### Development app
+### Running app
 
 To run the app locally on your computer
 
