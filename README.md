@@ -1,4 +1,3 @@
-#Movie Search
 
 ## Tech/Framework And Tools used
 
@@ -8,17 +7,7 @@
 
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 
-## Featured performance objectives
-
-- Reusable code and structures
-
-- Performant code
-
-## Quick Start
-
-The guildlines below contains the instructions/commands to get started.
-
-#### Development app
+### Development app
 
 To run the app locally on your computer
 
@@ -31,26 +20,8 @@ $ npm install
 $ npm start
 ```
 
-To get started with the unit testing
+### Testing Project
 
 1. Open the root directory fo the project on your terminal
 2. Run `npm run test`
 
----
-
----
-
-## Folder Structure
-
-```
-
-├── public
-├── src
-│   ├── assets
-│   ├── components
-│   ├── routes
-│   ├── slices
-│   └── pages
-│
-
-```
