@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Axios from "axios";
+
+require('dotenv').config();
+
 const initialState = {
   movies: [],
   movieDetails: null,
@@ -35,7 +38,7 @@ export const fetchMovies = (searchText) => async (dispatch) => {
     dispatch(slice.actions.loading(true));
     dispatch(slice.actions.fetchMoviesData([]));
     const response = await Axios.get(
-      `http://www.omdbapi.com/?s=${searchText}&apikey=46b69003&plot=full`
+      `http://www.omdbapi.com/?s=${searchText}&apikey=${process.env.REACT_APP_API_KEY}&plot=full`
     );
     if (response.status === 200) {
       if (response.data.Search) {
@@ -54,7 +57,7 @@ export const fetchMovieDetails = (id) => async (dispatch) => {
   try {
     dispatch(slice.actions.fetchMovieDetail(null));
     const response = await Axios.get(
-      `http://www.omdbapi.com/?i=${id}&apikey=46b69003&plot=full`
+      `http://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_API_KEY}&plot=full`
     );
     console.log(response, "resp...");
     if (response.status === 200) {
