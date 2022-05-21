@@ -59,7 +59,6 @@ export const fetchMovieDetails = (id) => async (dispatch) => {
     const response = await Axios.get(
       `http://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_API_KEY}&plot=full`
     );
-    console.log(response, "resp...");
     if (response.status === 200) {
       if (response.data.Error) {
         dispatch(slice.actions.createError(response.data.Error));
